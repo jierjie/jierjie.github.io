@@ -48,9 +48,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -60,6 +60,285 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-git10-github-hexo实现个人博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/19/git10-github-hexo实现个人博客/" class="article-date">
+  <time datetime="2017-07-19T09:12:02.000Z" itemprop="datePublished">2017-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/19/git10-github-hexo实现个人博客/">git10-github+hexo实现个人博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>github 提供的是 服务器  以及 域名</p>
+<p>hexo 是用来写博客（纯静态的博客）  没有数据库，没有后台代码！</p>
+<p>hexo可以将写博客的工作进行简化，你只需要写markdown文件（这个文件中会包含一些信息，比如文章的分类，文章的标签，文章标题，文章的创建时间！），hexo会负责将你的markdown文件转换成html文件</p>
+<h2 id="写博客前的准备"><a href="#写博客前的准备" class="headerlink" title="写博客前的准备"></a>写博客前的准备</h2><h3 id="需要的软件"><a href="#需要的软件" class="headerlink" title="需要的软件"></a>需要的软件</h3><ol>
+<li>markdown编辑器（可有可无）</li>
+<li><p>node（hexo的运行环境）  装完node npm会自动帮你装好<br> npm: node package manager   常用的所有资源都可以使用npm来安装（jQuery，bootstrap, angular, vue） 还可以装工具包（i5ting_toc, hexo, live-server）</p>
+<p> npm下载所有的包，默认都是从国外的服务器下载的！</p>
+<p> 安装一个淘宝的cnpm</p>
+<p> npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a></p>
+</li>
+</ol>
+<pre><code>cnpm 的命令和npm完全一致
+
+2.1 使用npm下载内容
+     cnpm install 包名称 -g
+</code></pre><ol>
+<li>git</li>
+</ol>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
+<li><p>安装node</p>
+</li>
+<li><p>通过npm来安装hexo<br> npm install hexo -g</p>
+</li>
+<li><p>装完hexo之后，就可以在命令行使用hexo命令了！</p>
+</li>
+<li><p>使用hexo init 初始化一个博客</p>
+</li>
+<li><p>使用hexo server 在本地预览你的博客</p>
+</li>
+<li><p>修改完md文件（sources/_posts/*.md） 之后 要使用 hexo g 来生成html</p>
+</li>
+<li><p>新建一篇文章 hexo new “文章标题”</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/19/git10-github-hexo实现个人博客/" data-id="cj5asnize000iosv3shjseaxm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git09-SSH协议介绍" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/19/git09-SSH协议介绍/" class="article-date">
+  <time datetime="2017-07-19T09:10:55.000Z" itemprop="datePublished">2017-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/19/git09-SSH协议介绍/">git09-SSH协议介绍</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Secure Shell 安全的shell</p>
+<p>http协议的格式</p>
+<p><a href="http://域名:端口号" target="_blank" rel="external">http://域名:端口号</a></p>
+<p>ssh 协议格式</p>
+<p> 用户名@域名</p>
+<p>ssh 一般用作服务器的远程管理，我们可以通过ssh安全的shell管理服务器</p>
+<p>在bash中提供了一个ssh命令，这个命令就是可以通过ssh协议连接服务器进行管理的！</p>
+<h2 id="ssh命令的说明"><a href="#ssh命令的说明" class="headerlink" title="ssh命令的说明"></a>ssh命令的说明</h2><p>ssh 用户名@域名</p>
+<p>以指定的用户名使用ssh协议登录域名对应的远程服务器</p>
+<h2 id="ssh免密登录的原理"><a href="#ssh免密登录的原理" class="headerlink" title="ssh免密登录的原理"></a>ssh免密登录的原理</h2><p>在服务器端，有一个名单，名单中存储所有能够登录当前服务器的客户端的公钥！</p>
+<p>由于每次客户端在请求登录的时候，会自动将客户端本身的公钥自动发送给服务器，服务器在拿到公钥之后，和名单中的内容进行一一对照，如果有当前这个公钥，那么就直接允许登录了！</p>
+<h2 id="在自己电脑上生成-公钥以及私钥！"><a href="#在自己电脑上生成-公钥以及私钥！" class="headerlink" title="在自己电脑上生成 公钥以及私钥！"></a>在自己电脑上生成 公钥以及私钥！</h2><p>ssh-keygen -t rsa</p>
+<p>执行这个命令的时候，一路默认，一路敲回车<br>直到看到冒泡泡为止！</p>
+<p>生成的秘钥默认在 用户根目录下面的.ssh文件夹中</p>
+<p>c:\users\你自己的用户名.ssh</p>
+<h2 id="实现服务器免密登录的步骤（了解）"><a href="#实现服务器免密登录的步骤（了解）" class="headerlink" title="实现服务器免密登录的步骤（了解）"></a>实现服务器免密登录的步骤（了解）</h2><ol>
+<li><p>如果当前电脑从未生成过秘钥，要执行<br>ssh-keygen -t rsa<br>生成秘钥</p>
+</li>
+<li><p>在用户根目录下面的.ssh文件夹中找到生成密钥，id_rsa.pub就是我们需要的公钥文件，复制里面所有的内容</p>
+</li>
+<li><p>登录到服务器（这次登录还是要密码的），在用户根目录下面找到.ssh文件夹</p>
+</li>
+<li><p>打开.ssh文件夹中的 authorized_keys文件</p>
+</li>
+<li><p>将刚才复制的所有的公钥的内容 粘贴到该文件最后，保存退出</p>
+</li>
+<li><p>再次登录服务器，便不再需要密码了！！</p>
+</li>
+</ol>
+<h2 id="实现github免密登录的过程"><a href="#实现github免密登录的过程" class="headerlink" title="实现github免密登录的过程"></a>实现github免密登录的过程</h2><ol>
+<li><p>如果当前电脑从未生成过秘钥，要执行<br>ssh-keygen -t rsa<br>生成秘钥</p>
+</li>
+<li><p>在用户根目录下面的.ssh文件夹中找到生成密钥，id_rsa.pub就是我们需要的公钥文件，复制里面所有的内容</p>
+</li>
+<li><p>打开github页面</p>
+</li>
+<li><p>点击自己头像 选择下面的settings</p>
+</li>
+<li><p>进入到settings页面之后左边栏中会有一个 ssh and gpg keys ，点击</p>
+</li>
+<li><p>进入到该页面之后，页面的右上角会有一个 New SSH Key 的绿色按钮， 点击</p>
+</li>
+<li><p>title文本框中选择性（可写可不写）的输入内容</p>
+</li>
+<li><p>在key文本框中，粘贴刚才复制的公钥的全部内容</p>
+</li>
+<li><p>点击下面的绿色的 Add SSH Key 按钮</p>
+</li>
+<li><p>获取或者push项目的时候，一定要记得选择ssh连接，才可以实现免密登录！</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/19/git09-SSH协议介绍/" data-id="cj5asnizb000fosv3mntwrh91" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git08-远程仓库" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/19/git08-远程仓库/" class="article-date">
+  <time datetime="2017-07-19T09:10:31.000Z" itemprop="datePublished">2017-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/19/git08-远程仓库/">git08-远程仓库</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>远程仓库，主要用来，做多人协作开发的时候，代码库的共享工作！</p>
+<h2 id="gitHub-就是一个远程仓库！"><a href="#gitHub-就是一个远程仓库！" class="headerlink" title="gitHub 就是一个远程仓库！"></a>gitHub 就是一个远程仓库！</h2><h2 id="远程仓库"><a href="#远程仓库" class="headerlink" title="远程仓库"></a>远程仓库</h2><h3 id="1-创建一个远程仓库"><a href="#1-创建一个远程仓库" class="headerlink" title="1. 创建一个远程仓库"></a>1. 创建一个远程仓库</h3><p>创建远程仓库的时候，文件夹名称一般都会用.git来结尾，表示当前文件夹是一个git库！</p>
+<p>远程仓库其实就是一个裸仓库，裸仓库，就是直接将.git文件夹中的所有的内容直接暴露出来，不会再有.git文件夹了!</p>
+<p>远程仓库的唯一的作用，就是用来做版本库共享。不能再远程仓库中做开发！</p>
+<p>远程仓库创建好之后，一般就不会再有别的操作了！</p>
+<p>git init –bare</p>
+<h3 id="2-将本地仓库推送到远程仓库中"><a href="#2-将本地仓库推送到远程仓库中" class="headerlink" title="2. 将本地仓库推送到远程仓库中"></a>2. 将本地仓库推送到远程仓库中</h3><p>git push 远程仓库的地址 本地分支名称:远程分支名称</p>
+<p>如果本地分支的名称好远程分支的名称一模一样那就可以只写一个分支名<br>例如： git push <a href="https://github.com/avakpan/frontend9.git" target="_blank" rel="external">https://github.com/avakpan/frontend9.git</a> master</p>
+<h3 id="3-从远程仓库获取版本库到本地"><a href="#3-从远程仓库获取版本库到本地" class="headerlink" title="3. 从远程仓库获取版本库到本地"></a>3. 从远程仓库获取版本库到本地</h3><p>将远程仓库的内容拷贝一份放到指定的本地文件夹当中，如果不指定本地文件夹名称，git会自动创建一个和远程仓库文件夹名称相同的文件夹</p>
+<p>git clone 远程仓库地址 本地文件夹名称</p>
+<h3 id="4-从远程仓库获取更新的内容"><a href="#4-从远程仓库获取更新的内容" class="headerlink" title="4. 从远程仓库获取更新的内容"></a>4. 从远程仓库获取更新的内容</h3><p>git pull 远程仓库地址 分支名称</p>
+<h3 id="5-原则"><a href="#5-原则" class="headerlink" title="5. 原则"></a>5. 原则</h3><p>一般情况下 需要向远程仓库推送新的内容之前，需要先获取一次最新的代码<br>执行push之前要执行一次pull操作</p>
+<h2 id="远程仓库刚创建出来的时候是一个空仓库"><a href="#远程仓库刚创建出来的时候是一个空仓库" class="headerlink" title="远程仓库刚创建出来的时候是一个空仓库"></a>远程仓库刚创建出来的时候是一个空仓库</h2><p>这时，可以将任意本地仓库通过push命令推送到远程仓库中，但是一旦远程仓库被push过一次之后，仓库就不再是一个空仓库了，之后能够被push到这个仓库中的内容，都是和仓库相关的，不能是任意一个好不相关的仓库，如果使用一个毫不相关的仓库进行push，会被拒绝！</p>
+<h2 id="远程地址管理"><a href="#远程地址管理" class="headerlink" title="远程地址管理"></a>远程地址管理</h2><h3 id="展示所有的别名"><a href="#展示所有的别名" class="headerlink" title="展示所有的别名"></a>展示所有的别名</h3><p>git remote</p>
+<p>注意： 如果当前项目是通过git clone从远程仓库获取下来的，那么会默认的有一个远程地址的别名(origin)，指向的就是当时clone这个项目的时候的远程地址</p>
+<p>origin <a href="https://github.com/avakpan/frontend9.git" target="_blank" rel="external">https://github.com/avakpan/frontend9.git</a></p>
+<h3 id="添加远程地址别名"><a href="#添加远程地址别名" class="headerlink" title="添加远程地址别名"></a>添加远程地址别名</h3><p>git remote add 别名 远程地址</p>
+<h3 id="删除远程地址"><a href="#删除远程地址" class="headerlink" title="删除远程地址"></a>删除远程地址</h3><p>git remote remove 别名</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/19/git08-远程仓库/" data-id="cj5asniz9000dosv3904m9o79" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git07-分支介绍" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/19/git07-分支介绍/" class="article-date">
+  <time datetime="2017-07-19T09:10:10.000Z" itemprop="datePublished">2017-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/19/git07-分支介绍/">git07-分支介绍</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="分支的概念"><a href="#分支的概念" class="headerlink" title="分支的概念"></a>分支的概念</h2><p>分支可以理解为版本库的一个备份</p>
+<p>在版本库中默认有一个主分支，我们可以通过git命令来创建一个新的分支，这个新的分支上面会会有当前这个分支上所有的内容，也就类似于是做了一个备份出来！</p>
+<h2 id="分支的操作"><a href="#分支的操作" class="headerlink" title="分支的操作"></a>分支的操作</h2><ol>
+<li><p>如何创建分支<br>git branch 分支名称</p>
+</li>
+<li><p>如何切换分支<br>默认情况下，我们处在主分支下面，要在其他分支下做开发，首先要切换到该分支</p>
+</li>
+</ol>
+<p>git checkout 分支名</p>
+<ol>
+<li><p>如何合并分支<br>将指定的分支合并到当前分支上！<br>git merge 要合并的分支名称</p>
+</li>
+<li><p>删除分支<br>git branch -d 分支名称</p>
+</li>
+</ol>
+<h2 id="分支的使用场景"><a href="#分支的使用场景" class="headerlink" title="分支的使用场景"></a>分支的使用场景</h2><p>多任务并行开发的时候，分支可以做到多个任务之间不会相互影响！</p>
+<p>每当要进行一个新任务的开发的时候，都需要创建一个分支出来，单独做开发，功能完成之后，再将分支合并回去。</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>主分支（master）是在第一次提交完成之后，才有的！！</p>
+<p>每次切换分支之前，要将所有的内容做一次提交！！！否则可能丢失修改！！</p>
+<p>任意分支都可开辟新的分支，新创建出来的分支，会拥有当前分支中所有的已有内容！</p>
+<h2 id="快捷创建并切换分支的命令"><a href="#快捷创建并切换分支的命令" class="headerlink" title="快捷创建并切换分支的命令"></a>快捷创建并切换分支的命令</h2><p>git chekcout -b 分支名称</p>
+<h2 id="回滚（回退到某个版本）之后，如果后悔了，不想回退了"><a href="#回滚（回退到某个版本）之后，如果后悔了，不想回退了" class="headerlink" title="回滚（回退到某个版本）之后，如果后悔了，不想回退了"></a>回滚（回退到某个版本）之后，如果后悔了，不想回退了</h2><p>通过git log -g  查看所要恢复的版本号（短期内可操作）</p>
+<p>git branch 分支名 版本号</p>
+<p>合并分支！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/19/git07-分支介绍/" data-id="cj5asniz1000aosv350wdlpco" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-git06-使用git进行静态页面托管" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -112,7 +391,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/19/git06-使用git进行静态页面托管/" data-id="cj5arlkle000a3ov34cjw06gs" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/19/git06-使用git进行静态页面托管/" data-id="cj5asniyw0008osv3zzxq1oaw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
@@ -176,7 +455,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/19/git04-基本使用/" data-id="cj5arlkkz00043ov38k95fpx2" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/19/git04-基本使用/" data-id="cj5asniyk0004osv3w9hxvngy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
@@ -224,7 +503,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/19/git05-原理介绍/" data-id="cj5arlkl300053ov324jithc7" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/19/git05-原理介绍/" data-id="cj5asniyq0005osv3fffe5d0g" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gi/">-gi</a></li></ul>
@@ -268,7 +547,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/19/git03-版本控制的介绍/" data-id="cj5arlkkx00033ov3q66rqpf2" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/19/git03-版本控制的介绍/" data-id="cj5asniyi0003osv3pxxhsj38" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
@@ -338,7 +617,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/19/git02-vi编辑器的使用/" data-id="cj5arlkkr00013ov3jzl76mwv" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/19/git02-vi编辑器的使用/" data-id="cj5asniya0001osv3xy9g9vs1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
@@ -427,7 +706,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/19/git01-shell的简介/" data-id="cj5arlkkl00003ov32wa3ym8s" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/07/19/git01-shell的简介/" data-id="cj5asniy20000osv35fmdnt66" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
@@ -439,52 +718,11 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/07/18/hello-world/" class="article-date">
-  <time datetime="2017-07-18T13:37:56.213Z" itemprop="datePublished">2017-07-18</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/18/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/18/hello-world/" data-id="cj5arlkla00083ov3ruhysjze" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
 
 
-  
-
+  <nav id="page-nav">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">__('next') &raquo;</a>
+  </nav>
 </section>
         
           <aside id="sidebar">
@@ -494,7 +732,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/gi/">-gi</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">-git</a></li></ul>
     </div>
@@ -504,7 +742,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/gi/" style="font-size: 10px;">-gi</a> <a href="/tags/git/" style="font-size: 20px;">-git</a>
     </div>
@@ -523,28 +761,28 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
+            <a href="/2017/07/19/git10-github-hexo实现个人博客/">git10-github+hexo实现个人博客</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/19/git09-SSH协议介绍/">git09-SSH协议介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/19/git08-远程仓库/">git08-远程仓库</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/19/git07-分支介绍/">git07-分支介绍</a>
+          </li>
+        
+          <li>
             <a href="/2017/07/19/git06-使用git进行静态页面托管/">使用git进行静态页面托管</a>
-          </li>
-        
-          <li>
-            <a href="/2017/07/19/git04-基本使用/">git的基本使用</a>
-          </li>
-        
-          <li>
-            <a href="/2017/07/19/git05-原理介绍/">git的原理介绍</a>
-          </li>
-        
-          <li>
-            <a href="/2017/07/19/git03-版本控制的介绍/">版本控制的介绍</a>
-          </li>
-        
-          <li>
-            <a href="/2017/07/19/git02-vi编辑器的使用/">vi编辑器的使用</a>
           </li>
         
       </ul>
@@ -560,7 +798,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 John Doe<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>

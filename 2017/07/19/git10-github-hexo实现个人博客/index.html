@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>git的基本使用 | Hexo</title>
+  <title>git10-github+hexo实现个人博客 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="git分布式版本控制工具！ 版本控制工具能够管理的内容 版本控制工具不仅能够保存文件的内容状态 很能够保存文件的 是否被删除 是否有新增文件  git的基本使用git的配置命令，这个命令只需要在一台电脑上执行一次 git config –global user.name pangit config –global user.email panming@itcast.cn  git initgit">
+  <meta name="description" content="github 提供的是 服务器  以及 域名 hexo 是用来写博客（纯静态的博客）  没有数据库，没有后台代码！ hexo可以将写博客的工作进行简化，你只需要写markdown文件（这个文件中会包含一些信息，比如文章的分类，文章的标签，文章标题，文章的创建时间！），hexo会负责将你的markdown文件转换成html文件 写博客前的准备需要的软件 markdown编辑器（可有可无） node（">
 <meta name="keywords" content="-git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git的基本使用">
-<meta property="og:url" content="http://yoursite.com/2017/07/19/git04-基本使用/index.html">
+<meta property="og:title" content="git10-github+hexo实现个人博客">
+<meta property="og:url" content="http://yoursite.com/2017/07/19/git10-github-hexo实现个人博客/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="git分布式版本控制工具！ 版本控制工具能够管理的内容 版本控制工具不仅能够保存文件的内容状态 很能够保存文件的 是否被删除 是否有新增文件  git的基本使用git的配置命令，这个命令只需要在一台电脑上执行一次 git config –global user.name pangit config –global user.email panming@itcast.cn  git initgit">
-<meta property="og:updated_time" content="2017-07-19T09:00:51.290Z">
+<meta property="og:description" content="github 提供的是 服务器  以及 域名 hexo 是用来写博客（纯静态的博客）  没有数据库，没有后台代码！ hexo可以将写博客的工作进行简化，你只需要写markdown文件（这个文件中会包含一些信息，比如文章的分类，文章的标签，文章标题，文章的创建时间！），hexo会负责将你的markdown文件转换成html文件 写博客前的准备需要的软件 markdown编辑器（可有可无） node（">
+<meta property="og:updated_time" content="2017-07-19T09:16:33.623Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git的基本使用">
-<meta name="twitter:description" content="git分布式版本控制工具！ 版本控制工具能够管理的内容 版本控制工具不仅能够保存文件的内容状态 很能够保存文件的 是否被删除 是否有新增文件  git的基本使用git的配置命令，这个命令只需要在一台电脑上执行一次 git config –global user.name pangit config –global user.email panming@itcast.cn  git initgit">
+<meta name="twitter:title" content="git10-github+hexo实现个人博客">
+<meta name="twitter:description" content="github 提供的是 服务器  以及 域名 hexo 是用来写博客（纯静态的博客）  没有数据库，没有后台代码！ hexo可以将写博客的工作进行简化，你只需要写markdown文件（这个文件中会包含一些信息，比如文章的分类，文章的标签，文章标题，文章的创建时间！），hexo会负责将你的markdown文件转换成html文件 写博客前的准备需要的软件 markdown编辑器（可有可无） node（">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-git04-基本使用" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-git10-github-hexo实现个人博客" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/07/19/git04-基本使用/" class="article-date">
-  <time datetime="2017-07-19T08:37:48.000Z" itemprop="datePublished">2017-07-19</time>
+    <a href="/2017/07/19/git10-github-hexo实现个人博客/" class="article-date">
+  <time datetime="2017-07-19T09:12:02.000Z" itemprop="datePublished">2017-07-19</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      git的基本使用
+      git10-github+hexo实现个人博客
     </h1>
   
 
@@ -86,37 +86,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>分布式版本控制工具！</p>
-<h2 id="版本控制工具能够管理的内容"><a href="#版本控制工具能够管理的内容" class="headerlink" title="版本控制工具能够管理的内容"></a>版本控制工具能够管理的内容</h2><ol>
-<li>版本控制工具不仅能够保存文件的内容状态</li>
-<li>很能够保存文件的 是否被删除 是否有新增文件</li>
-</ol>
-<h2 id="git的基本使用"><a href="#git的基本使用" class="headerlink" title="git的基本使用"></a>git的基本使用</h2><p>git的配置命令，这个命令只需要在一台电脑上执行一次</p>
-<p>git config –global user.name pan<br>git config –global user.email panming@itcast.cn</p>
-<ol>
-<li>git init<br>git init命令，是将当前所在的文件夹，用git版本控制工具进行管理！</li>
-</ol>
-<p>执行这句命令之后，会在当前文件夹中生成一个.git的隐藏文件夹，该文件夹就是git用来存储每次修改的历史记录的版本仓库！</p>
-<ol>
-<li>git status<br>用来查看当前文件夹中，这些文件的状态，如果文件没有被git管理，会有 untracked files 提示！</li>
-</ol>
-<ol>
-<li>git add<br>用来将文件添加到git中，让git进行管理！</li>
-</ol>
-<p>git add 文件名 文件名<br>git add *  将所有的文件全部添加到git中进行管理<br>git add -A  将所有的文件全部添加到git中进行管理</p>
-<ol>
-<li><p>git commit -m “提示信息”<br>将当前的文件状态保存一份到版本库当中，生成一个新的版本，历史记录中会有这个版本的记录</p>
+        <p>github 提供的是 服务器  以及 域名</p>
+<p>hexo 是用来写博客（纯静态的博客）  没有数据库，没有后台代码！</p>
+<p>hexo可以将写博客的工作进行简化，你只需要写markdown文件（这个文件中会包含一些信息，比如文章的分类，文章的标签，文章标题，文章的创建时间！），hexo会负责将你的markdown文件转换成html文件</p>
+<h2 id="写博客前的准备"><a href="#写博客前的准备" class="headerlink" title="写博客前的准备"></a>写博客前的准备</h2><h3 id="需要的软件"><a href="#需要的软件" class="headerlink" title="需要的软件"></a>需要的软件</h3><ol>
+<li>markdown编辑器（可有可无）</li>
+<li><p>node（hexo的运行环境）  装完node npm会自动帮你装好<br> npm: node package manager   常用的所有资源都可以使用npm来安装（jQuery，bootstrap, angular, vue） 还可以装工具包（i5ting_toc, hexo, live-server）</p>
+<p> npm下载所有的包，默认都是从国外的服务器下载的！</p>
+<p> 安装一个淘宝的cnpm</p>
+<p> npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a></p>
 </li>
-<li><p>git log<br>用来查看所有已经保存的版本的内容</p>
+</ol>
+<pre><code>cnpm 的命令和npm完全一致
+
+2.1 使用npm下载内容
+     cnpm install 包名称 -g
+</code></pre><ol>
+<li>git</li>
+</ol>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ol>
+<li><p>安装node</p>
 </li>
-<li><p>git reset –hard 版本号<br>将代码恢复到指定的版本</p>
+<li><p>通过npm来安装hexo<br> npm install hexo -g</p>
+</li>
+<li><p>装完hexo之后，就可以在命令行使用hexo命令了！</p>
+</li>
+<li><p>使用hexo init 初始化一个博客</p>
+</li>
+<li><p>使用hexo server 在本地预览你的博客</p>
+</li>
+<li><p>修改完md文件（sources/_posts/*.md） 之后 要使用 hexo g 来生成html</p>
+</li>
+<li><p>新建一篇文章 hexo new “文章标题”</p>
 </li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/19/git04-基本使用/" data-id="cj5asniyk0004osv3w9hxvngy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/07/19/git10-github-hexo实现个人博客/" data-id="cj5asnize000iosv3shjseaxm" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
@@ -127,19 +135,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/07/19/git06-使用git进行静态页面托管/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          使用git进行静态页面托管
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/07/19/git05-原理介绍/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/07/19/git09-SSH协议介绍/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">git的原理介绍</div>
+      <div class="article-nav-title">git09-SSH协议介绍</div>
     </a>
   
 </nav>
