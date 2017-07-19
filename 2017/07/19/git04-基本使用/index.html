@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>git的基本使用 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="git的基本使用git分布式版本控制工具！ 版本控制工具能够管理的内容 版本控制工具不仅能够保存文件的内容状态 很能够保存文件的 是否被删除 是否有新增文件  git的基本使用git的配置命令，这个命令只需要在一台电脑上执行一次 git config –global user.name pangit config –global user.email panming@itcast.cn  git">
+<meta name="keywords" content="-git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git的基本使用">
+<meta property="og:url" content="http://yoursite.com/2017/07/19/git04-基本使用/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="git的基本使用git分布式版本控制工具！ 版本控制工具能够管理的内容 版本控制工具不仅能够保存文件的内容状态 很能够保存文件的 是否被删除 是否有新增文件  git的基本使用git的配置命令，这个命令只需要在一台电脑上执行一次 git config –global user.name pangit config –global user.email panming@itcast.cn  git">
+<meta property="og:updated_time" content="2017-07-19T08:44:43.458Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git的基本使用">
+<meta name="twitter:description" content="git的基本使用git分布式版本控制工具！ 版本控制工具能够管理的内容 版本控制工具不仅能够保存文件的内容状态 很能够保存文件的 是否被删除 是否有新增文件  git的基本使用git的配置命令，这个命令只需要在一台电脑上执行一次 git config –global user.name pangit config –global user.email panming@itcast.cn  git">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-git04-基本使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/19/git04-基本使用/" class="article-date">
+  <time datetime="2017-07-19T08:37:48.000Z" itemprop="datePublished">2017-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      git的基本使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="git的基本使用"><a href="#git的基本使用" class="headerlink" title="git的基本使用"></a>git的基本使用</h1><h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>分布式版本控制工具！</p>
+<h2 id="版本控制工具能够管理的内容"><a href="#版本控制工具能够管理的内容" class="headerlink" title="版本控制工具能够管理的内容"></a>版本控制工具能够管理的内容</h2><ol>
+<li>版本控制工具不仅能够保存文件的内容状态</li>
+<li>很能够保存文件的 是否被删除 是否有新增文件</li>
+</ol>
+<h2 id="git的基本使用-1"><a href="#git的基本使用-1" class="headerlink" title="git的基本使用"></a>git的基本使用</h2><p>git的配置命令，这个命令只需要在一台电脑上执行一次</p>
+<p>git config –global user.name pan<br>git config –global user.email panming@itcast.cn</p>
+<ol>
+<li>git init<br>git init命令，是将当前所在的文件夹，用git版本控制工具进行管理！</li>
+</ol>
+<p>执行这句命令之后，会在当前文件夹中生成一个.git的隐藏文件夹，该文件夹就是git用来存储每次修改的历史记录的版本仓库！</p>
+<ol>
+<li>git status<br>用来查看当前文件夹中，这些文件的状态，如果文件没有被git管理，会有 untracked files 提示！</li>
+</ol>
+<ol>
+<li>git add<br>用来将文件添加到git中，让git进行管理！</li>
+</ol>
+<p>git add 文件名 文件名<br>git add *  将所有的文件全部添加到git中进行管理<br>git add -A  将所有的文件全部添加到git中进行管理</p>
+<ol>
+<li><p>git commit -m “提示信息”<br>将当前的文件状态保存一份到版本库当中，生成一个新的版本，历史记录中会有这个版本的记录</p>
+</li>
+<li><p>git log<br>用来查看所有已经保存的版本的内容</p>
+</li>
+<li><p>git reset –hard 版本号<br>将代码恢复到指定的版本</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/19/git04-基本使用/" data-id="cj5arlkkz00043ov38k95fpx2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/07/19/git06-使用git进行静态页面托管/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          使用git进行静态页面托管
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/07/19/git05-原理介绍/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">git的原理介绍</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">-git</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/git/" style="font-size: 10px;">-git</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/07/">July 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/07/19/git06-使用git进行静态页面托管/">使用git进行静态页面托管</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/19/git04-基本使用/">git的基本使用</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/19/git05-原理介绍/">git的原理介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/19/git03-版本控制的介绍/">版本控制的介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/19/git02-vi编辑器的使用/">vi编辑器的使用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

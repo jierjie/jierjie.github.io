@@ -61,16 +61,12 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-第二篇文章" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-git06-使用git进行静态页面托管" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/07/19/第二篇文章/" class="article-date">
-  <time datetime="2017-07-19T06:03:40.000Z" itemprop="datePublished">2017-07-19</time>
+    <a href="/2017/07/19/git06-使用git进行静态页面托管/" class="article-date">
+  <time datetime="2017-07-19T08:38:52.000Z" itemprop="datePublished">2017-07-19</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/学习-javascript/">-学习 -javascript</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
@@ -79,7 +75,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/19/第二篇文章/">关于git的学习</a>
+      <a class="article-title" href="/2017/07/19/git06-使用git进行静态页面托管/">使用git进行静态页面托管</a>
     </h1>
   
 
@@ -87,38 +83,354 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##分支的概念<br>分支可以理解为版本库的一个备份</p>
-<p>在版本库中默认有一个主分支，我们可以通过git命令来创建一个新的分支，这个新的分支上面会会有当前这个分支上所有的内容，也就类似于是做了一个备份出来！</p>
-<h2 id="分支的操作"><a href="#分支的操作" class="headerlink" title="分支的操作"></a>分支的操作</h2><ol>
-<li><p>如何创建分支<br>git branch 分支名称</p>
-</li>
-<li><p>如何切换分支<br>默认情况下，我们处在主分支下面，要在其他分支下做开发，首先要切换到该分支</p>
-</li>
-</ol>
-<p>git checkout 分支名</p>
+        <h1 id="使用github进行静态页面托管"><a href="#使用github进行静态页面托管" class="headerlink" title="使用github进行静态页面托管"></a>使用github进行静态页面托管</h1><h2 id="github"><a href="#github" class="headerlink" title="github"></a>github</h2><p>全球最大的源代码托管平台</p>
+<h2 id="github和git的关系"><a href="#github和git的关系" class="headerlink" title="github和git的关系"></a>github和git的关系</h2><p>git可以用来获取github上的代码，还可以将自己的代码推送到github上</p>
+<p>git可以看做是操作github的一个工具！</p>
+<h2 id="github静态页面托管服务"><a href="#github静态页面托管服务" class="headerlink" title="github静态页面托管服务"></a>github静态页面托管服务</h2><p>一个账户下面只能有一个项目做静态页面托管！</p>
 <ol>
-<li><p>如何合并分支<br>将指定的分支合并到当前分支上！<br>git merge 要合并的分支名称</p>
+<li><p>注册github账号</p>
 </li>
-<li><p>删除分支<br>git branch -d 分支名称</p>
+<li><p>创建一个仓库   网页右上角 有一个加号  点击加号 点击 new repository</p>
+</li>
+<li><p>Repository name  要设置成 自己的用户名.github.io</p>
+</li>
+<li><p>点击create repository</p>
+</li>
+<li><p>复制 https的连接</p>
+</li>
+<li><p>将本地文件夹使用git进行管理， 进行一次提交</p>
+</li>
+<li><p>使用git push命令，将本地文件夹中的内容全数推送到github中新创建的仓库中</p>
 </li>
 </ol>
-<h2 id="分支的使用场景"><a href="#分支的使用场景" class="headerlink" title="分支的使用场景"></a>分支的使用场景</h2><p>多任务并行开发的时候，分支可以做到多个任务之间不会相互影响！</p>
-<p>每当要进行一个新任务的开发的时候，都需要创建一个分支出来，单独做开发，功能完成之后，再将分支合并回去。</p>
-<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>主分支（master）是在第一次提交完成之后，才有的！！</p>
-<p>每次切换分支之前，要将所有的内容做一次提交！！！否则可能丢失修改！！</p>
-<p>任意分支都可开辟新的分支，新创建出来的分支，会拥有当前分支中所有的已有内容！</p>
-<h2 id="快捷创建并切换分支的命令"><a href="#快捷创建并切换分支的命令" class="headerlink" title="快捷创建并切换分支的命令"></a>快捷创建并切换分支的命令</h2><p>git chekcout -b 分支名称</p>
-<h2 id="回滚（回退到某个版本）之后，如果后悔了，不想回退了"><a href="#回滚（回退到某个版本）之后，如果后悔了，不想回退了" class="headerlink" title="回滚（回退到某个版本）之后，如果后悔了，不想回退了"></a>回滚（回退到某个版本）之后，如果后悔了，不想回退了</h2><p>通过git log -g  查看所要恢复的版本号（短期内可操作）</p>
-<p>git branch 分支名 版本号</p>
-<p>合并分支！</p>
+<p>git push <a href="https://github.com/avakpan/123.git" target="_blank" rel="external">https://github.com/avakpan/123.git</a> master</p>
+<ol>
+<li>在浏览器地址栏中 直接输入  自己的用户名.github.io  就可以访问到自己的网站了！</li>
+</ol>
+<p>git push        将本地的仓库推送到github上</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/19/第二篇文章/" data-id="cj5an1rwt0001xwv3yiiytpa7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/07/19/git06-使用git进行静态页面托管/" data-id="cj5arlkle000a3ov34cjw06gs" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git04-基本使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/19/git04-基本使用/" class="article-date">
+  <time datetime="2017-07-19T08:37:48.000Z" itemprop="datePublished">2017-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/19/git04-基本使用/">git的基本使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="git的基本使用"><a href="#git的基本使用" class="headerlink" title="git的基本使用"></a>git的基本使用</h1><h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>分布式版本控制工具！</p>
+<h2 id="版本控制工具能够管理的内容"><a href="#版本控制工具能够管理的内容" class="headerlink" title="版本控制工具能够管理的内容"></a>版本控制工具能够管理的内容</h2><ol>
+<li>版本控制工具不仅能够保存文件的内容状态</li>
+<li>很能够保存文件的 是否被删除 是否有新增文件</li>
+</ol>
+<h2 id="git的基本使用-1"><a href="#git的基本使用-1" class="headerlink" title="git的基本使用"></a>git的基本使用</h2><p>git的配置命令，这个命令只需要在一台电脑上执行一次</p>
+<p>git config –global user.name pan<br>git config –global user.email panming@itcast.cn</p>
+<ol>
+<li>git init<br>git init命令，是将当前所在的文件夹，用git版本控制工具进行管理！</li>
+</ol>
+<p>执行这句命令之后，会在当前文件夹中生成一个.git的隐藏文件夹，该文件夹就是git用来存储每次修改的历史记录的版本仓库！</p>
+<ol>
+<li>git status<br>用来查看当前文件夹中，这些文件的状态，如果文件没有被git管理，会有 untracked files 提示！</li>
+</ol>
+<ol>
+<li>git add<br>用来将文件添加到git中，让git进行管理！</li>
+</ol>
+<p>git add 文件名 文件名<br>git add *  将所有的文件全部添加到git中进行管理<br>git add -A  将所有的文件全部添加到git中进行管理</p>
+<ol>
+<li><p>git commit -m “提示信息”<br>将当前的文件状态保存一份到版本库当中，生成一个新的版本，历史记录中会有这个版本的记录</p>
+</li>
+<li><p>git log<br>用来查看所有已经保存的版本的内容</p>
+</li>
+<li><p>git reset –hard 版本号<br>将代码恢复到指定的版本</p>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/19/git04-基本使用/" data-id="cj5arlkkz00043ov38k95fpx2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="git的基本使用-git05-原理介绍" class="article article-type-git的基本使用" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/19/git05-原理介绍/" class="article-date">
+  <time datetime="2017-07-19T08:37:00.000Z" itemprop="datePublished">2017-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/19/git05-原理介绍/">git的原理介绍</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="git原理"><a href="#git原理" class="headerlink" title="git原理"></a>git原理</h1><h2 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h2><ol>
+<li><p>工作目录</p>
+</li>
+<li><p>暂存区    在.git文件夹下面 index</p>
+</li>
+<li><p>版本库    在.git文件夹下面</p>
+</li>
+</ol>
+<h2 id="文件的状态"><a href="#文件的状态" class="headerlink" title="文件的状态"></a>文件的状态</h2><p>untracked   文件新建之后，并未受过管理就是未追踪状态<br>modified    文件被修改了<br>deleted     文件被删除了<br>staged      已暂存，当使用git add命令将文件添加到暂存区之后，这个文件就处于staged<br>commited    已提交，当使用git commit 提交之后就是 已提交状体</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>git对于文件的管理，其实就是调用各个命令，将文件在3个分区之间来回传递的过程！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/19/git05-原理介绍/" data-id="cj5arlkl300053ov324jithc7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git03-版本控制的介绍" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/19/git03-版本控制的介绍/" class="article-date">
+  <time datetime="2017-07-19T08:36:21.000Z" itemprop="datePublished">2017-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/19/git03-版本控制的介绍/">版本控制的介绍</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="版本控制的介绍"><a href="#版本控制的介绍" class="headerlink" title="版本控制的介绍"></a>版本控制的介绍</h1><h2 id="版本控制工具-VCS"><a href="#版本控制工具-VCS" class="headerlink" title="版本控制工具 VCS"></a>版本控制工具 VCS</h2><p>Version Control System</p>
+<p>将代码每次更改之后的结果进行保存，保存为指定的版本。</p>
+<p>VCS可以实现的效果就是，给每一次修改都保存一次历史记录。</p>
+<h2 id="版本控制工具分类"><a href="#版本控制工具分类" class="headerlink" title="版本控制工具分类"></a>版本控制工具分类</h2><h3 id="本地式版本控制工具"><a href="#本地式版本控制工具" class="headerlink" title="本地式版本控制工具"></a>本地式版本控制工具</h3><p>版本库存放在本地，每个人都有自己的版本库，跟别人毫无关系，在单人开发当中，本地版本控制系统可以用来管理代码，但是如果是多人开发，就没办法使用了</p>
+<h3 id="集中式版本控制工具"><a href="#集中式版本控制工具" class="headerlink" title="集中式版本控制工具"></a>集中式版本控制工具</h3><p>将版本库集中管理，每次修改的内容都需要在这个集中管理的版本库中生成历史记录！ （SVN）</p>
+<h3 id="分布式版本控制工具"><a href="#分布式版本控制工具" class="headerlink" title="分布式版本控制工具"></a>分布式版本控制工具</h3><p>git</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/19/git03-版本控制的介绍/" data-id="cj5arlkkx00033ov3q66rqpf2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git02-vi编辑器的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/19/git02-vi编辑器的使用/" class="article-date">
+  <time datetime="2017-07-19T08:35:46.000Z" itemprop="datePublished">2017-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/19/git02-vi编辑器的使用/">vi编辑器的使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="vi编辑器的使用"><a href="#vi编辑器的使用" class="headerlink" title="vi编辑器的使用"></a>vi编辑器的使用</h1><h2 id="vi编辑器的概念"><a href="#vi编辑器的概念" class="headerlink" title="vi编辑器的概念"></a>vi编辑器的概念</h2><p>是bash中自带的编辑器，和windows图形界面shell的记事本属于同一个类型的东西。</p>
+<p>vi是一个纯命令行的编辑器，没有图形界面，所有的操作都是通过键盘来进行的！</p>
+<h2 id="vi启动命令"><a href="#vi启动命令" class="headerlink" title="vi启动命令"></a>vi启动命令</h2><p>在bash中直接输入 vi 就可以启动vi编辑器</p>
+<p>启动vi编辑器的时候可以加参数</p>
+<p>vi 文件路径(文件名)<br>功能：编辑指定的文件，如果该文件不存在，那么会在保存的时候，自动创建这个文件</p>
+<h2 id="vi编辑器的模式"><a href="#vi编辑器的模式" class="headerlink" title="vi编辑器的模式"></a>vi编辑器的模式</h2><h3 id="普通模式"><a href="#普通模式" class="headerlink" title="普通模式"></a>普通模式</h3><p>当启动vi编辑器之后，编辑器就默认处在普通模式下了<br>在普通模式下无法进行编辑操作， 所有的键盘按键，几乎都对应了相应的命令</p>
+<h3 id="插入模式"><a href="#插入模式" class="headerlink" title="插入模式"></a>插入模式</h3><p>只有在插入模式下才可以像普通编辑器一样编辑内容</p>
+<h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><p>可以执行一些相关的命令，实现一些功能！</p>
+<h2 id="模式之间的转换"><a href="#模式之间的转换" class="headerlink" title="模式之间的转换"></a>模式之间的转换</h2><ol>
+<li><p>普通模式 —&gt; 插入模式<br>a  在当前光标的后面插入<br>A  在当前行的最后插入<br>i  在当前光标的前面插入<br>I  在当前行的最前面插入<br>o  在当前光标所在行下面新开一行进入插入模式<br>O  在当前光标所在行上面新开一行进入插入模式</p>
+</li>
+<li><p>插入模式 —&gt; 普通模式<br>esc<br>ctrl + [</p>
+</li>
+<li><p>普通模式 —&gt; 命令模式<br>:</p>
+</li>
+<li><p>命令模式 —&gt; 普通模式<br>把所有输入的命令全部删光，把冒号也删掉，就自动回到普通模式了</p>
+</li>
+</ol>
+<p>esc  两次</p>
+<ol>
+<li>插入模式和命令模式之间不能直接切换，只能先回到普通模式，在进入相应的想切换的模式、</li>
+</ol>
+<h2 id="普通模式下的命令"><a href="#普通模式下的命令" class="headerlink" title="普通模式下的命令"></a>普通模式下的命令</h2><p>a  在当前光标的后面插入<br>A  在当前行的最后插入<br>i  在当前光标的前面插入<br>I  在当前行的最前面插入<br>o  在当前光标所在行下面新开一行进入插入模式<br>O  在当前光标所在行上面新开一行进入插入模式</p>
+<p>dd 删除当前行<br>ndd n表示要删几行<br>dw 可以删除一个单词</p>
+<p>移动指令：<br>j 下<br>k 上<br>h 左<br>l 右</p>
+<p>w 向后移动一个单词<br>b 想前移动一个单词<br>e 跳到单词的结尾</p>
+<p>0 移动到当前行开始<br>$ 移动到当前行结束</p>
+<p>yy: 复制当前行<br>p: 粘贴</p>
+<h2 id="命令模式下的命令"><a href="#命令模式下的命令" class="headerlink" title="命令模式下的命令"></a>命令模式下的命令</h2><p>:w  保存文件<br>:q  退出编辑器<br>:wq 保存并退出</p>
+<p>:q! 强制退出<br>:w! 强制保存</p>
+<p>如果意外的在编辑的时候关闭了bash，文件没有保存就将bash关闭了，那么当前文件夹下会有个<em>*</em>.swp文件，这个文件保存的就是当时关闭的时候文件的状态，修改的内容全在里面</p>
+<p>当你再次使用vi命令打开vi编辑器进行编辑的时候，会出现警告<br>下面会有相应的选项，我们可以选择recover 输入r  恢复swp文件中的内容 保存并退出<br>再次打开的时候，还会有警告，需要选择delete 输入d 删除掉这个swp文件 编辑器就恢复正常了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/19/git02-vi编辑器的使用/" data-id="cj5arlkkr00013ov3jzl76mwv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git01-shell的简介" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/07/19/git01-shell的简介/" class="article-date">
+  <time datetime="2017-07-19T08:34:29.000Z" itemprop="datePublished">2017-07-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/07/19/git01-shell的简介/">shell的简介</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="shell-简介"><a href="#shell-简介" class="headerlink" title="shell 简介"></a>shell 简介</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>shell是什么？<br>shell 壳！</p>
+<p>shell就是介于用户和操作系统内核之间的桥梁，让用户使用操作系统的时候更加方便！</p>
+<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><p>图形化shell： windows图形化界面<br>命令行shell:  cmd  bash（所有的linux操作系统都会自带这个shell） powershell</p>
+<h2 id="bash"><a href="#bash" class="headerlink" title="bash"></a>bash</h2><p>linux系统下的自带的一个shell</p>
+<p>我们可以在bash下执行所有的linux的命令，来实现平时通过图形化界面实现的操作！！</p>
+<p>因为在想要执行linux命令，必须是在linux系统的bash环境下。</p>
+<h2 id="bash命令的格式"><a href="#bash命令的格式" class="headerlink" title="bash命令的格式"></a>bash命令的格式</h2><p>命令名称 -选项 -选项 参数 参数</p>
+<h3 id="ls"><a href="#ls" class="headerlink" title="ls"></a>ls</h3><p>全称： list<br>功能： 展示当前文件夹下所有的文件内容</p>
+<p>ls -a         -a 是一个选项<br>功能： 显示当前文件夹下所有的内容  包括隐藏的文件</p>
+<p>ls -l         -l 是一个选项<br>功能： 将文件以列表的形式进行展示</p>
+<p>如果有多个选项 可以依次将选项列在命令后面<br>ls -a -l</p>
+<p>也可以将选项进行合并<br>ls -al</p>
+<p>ls命令也可以有参数<br>ls 路径<br>功能 展示指定路径下的所有的文件信息</p>
+<h3 id="pwd"><a href="#pwd" class="headerlink" title="pwd"></a>pwd</h3><p>全称： print work directory</p>
+<h3 id="cd"><a href="#cd" class="headerlink" title="cd"></a>cd</h3><p>全称： change directory    使用频率非常高！！</p>
+<p>功能： 改变当前所处的工作目录</p>
+<p>/    当前电脑的根目录  里面包含c d 盘<br>~    当前用户的根目录</p>
+<h3 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h3><p>功能：创建文件</p>
+<p>touch 文件名称     在当前的文件夹下创建文件</p>
+<p>touch 文件的路径   在指定的文件夹下创建文件</p>
+<h3 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h3><p>功能： 创建文件夹</p>
+<p>mkdir 文件夹名称   在当前文件夹下创建新的文件夹</p>
+<p>mkdir 文件夹路径   在指定的文件夹下创建新的文件夹</p>
+<h3 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h3><p>功能： 清空屏幕</p>
+<h3 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h3><p>全称： remove<br>功能： 删除指定的文件</p>
+<p>rm 文件名称      删除当前目录下指定名称的文件</p>
+<p>rm 文件路径      删除指定目录下的指定名称的文件</p>
+<p>rm -r       -r 选项指的是  递归的意思  递归删除！！</p>
+<p>rm -f       -f 选项是指   force    强制删除</p>
+<p>注意： rm 和 rmdir删除的内容不进回收站！！！</p>
+<h3 id="rmdir"><a href="#rmdir" class="headerlink" title="rmdir"></a>rmdir</h3><p>全称： remove directiory</p>
+<p>rmdir 文件夹名称<br>rmdir 文件夹路径</p>
+<p>rmdir只能够删除空文件夹，如果文件夹中有内容，则无法删除！！</p>
+<h3 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h3><p>全称 copy</p>
+<p>功能： 拷贝文件</p>
+<p>cp 源文件(名称或者路径) 目标文件(名称或者路径)</p>
+<p>cp -r 源文件夹 目标文件夹    可以用来复制文件夹！！</p>
+<h3 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h3><p>全称 move<br>功能： 移动文件 类似于剪切</p>
+<p>mv 源文件 目标文件</p>
+<p>mv 移动文件夹不需要加任何选项，和文件操作一样！</p>
+<p>mv也可以用来执行重命名的操作！</p>
+<h3 id="cat"><a href="#cat" class="headerlink" title="cat"></a>cat</h3><p>功能：展示文件内容</p>
+<p>cat 文件名/文件路径</p>
+<p>cat是将所有的文件内容一次性的全部展示出来</p>
+<h3 id="less"><a href="#less" class="headerlink" title="less"></a>less</h3><p>功能：分页展示文件内容</p>
+<p>less 文件名/文件路径</p>
+<p>翻页： 使用空格      翻一行  方向键  回车键<br>退出浏览： q</p>
+<h3 id="tab键"><a href="#tab键" class="headerlink" title="tab键"></a>tab键</h3><p>智能补全</p>
+<h3 id="echo"><a href="#echo" class="headerlink" title="echo"></a>echo</h3><p>echo用来打印内容</p>
+<h3 id="gt-输出重定向"><a href="#gt-输出重定向" class="headerlink" title="&gt;  输出重定向"></a>&gt;  输出重定向</h3><p>所有命令的输出默认都是在屏幕上<br>我们可以通过 输出重定向命令 将输结果 输出到指定的位置</p>
+<p><code>&gt;</code>：　替换操作<br><code>&gt;&gt;</code>:  追加操作</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/07/19/git01-shell的简介/" data-id="cj5arlkkl00003ov32wa3ym8s" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">-git</a></li></ul>
 
     </footer>
   </div>
@@ -162,7 +474,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/07/18/hello-world/" data-id="cj5an1rwl0000xwv3gtqb1su0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/07/18/hello-world/" data-id="cj5arlkla00083ov3ruhysjze" class="article-share-link">Share</a>
       
       
     </footer>
@@ -178,20 +490,13 @@
           <aside id="sidebar">
   
     
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/学习-javascript/">-学习 -javascript</a></li></ul>
-    </div>
-  </div>
-
 
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">-git</a></li></ul>
     </div>
   </div>
 
@@ -201,7 +506,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/git/" style="font-size: 10px;">git</a>
+      <a href="/tags/git/" style="font-size: 10px;">-git</a>
     </div>
   </div>
 
@@ -223,11 +528,23 @@
       <ul>
         
           <li>
-            <a href="/2017/07/19/第二篇文章/">关于git的学习</a>
+            <a href="/2017/07/19/git06-使用git进行静态页面托管/">使用git进行静态页面托管</a>
           </li>
         
           <li>
-            <a href="/2017/07/18/hello-world/">Hello World</a>
+            <a href="/2017/07/19/git04-基本使用/">git的基本使用</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/19/git05-原理介绍/">git的原理介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/19/git03-版本控制的介绍/">版本控制的介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2017/07/19/git02-vi编辑器的使用/">vi编辑器的使用</a>
           </li>
         
       </ul>
